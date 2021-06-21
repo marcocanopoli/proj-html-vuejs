@@ -94,7 +94,7 @@ export default {
                 display: flex;
                 justify-content: space-between;
                 font-size: 14px;
-                color: $text-light-col;
+                color: $white60;
 
                 li {
                     &:first-child {
@@ -105,7 +105,7 @@ export default {
                     }
 
                     * {
-                        color: $text-light-col;
+                        color: $white60;
                     }
 
                     i {
@@ -122,27 +122,8 @@ export default {
             height: $nav-height;
             margin-top: 10px;
 
-            *:not(.btn) {
-                color: $text-dark-col;
-                
-            }
-
-            a {
-                span {
-                    font-size: 20px;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 5px;
-                    margin-right: 5px;
-
-                    &:first-child {
-                        padding: 10px 0 10px 30px;
-                        border-top-left-radius: 25px;
-                        border-bottom-left-radius: 25px;
-                        color: $brand-col;
-                        background-color: $brand-alpha15-col;
-                    }
-                }
+            a:not(.btn) {
+                color: $text-dark-col;                
             }
 
             ul {
@@ -195,7 +176,7 @@ export default {
                         width: 100%;
                     }                    
 
-                    a{
+                    a {
                         margin-right: 15px;
                     }
                 }
