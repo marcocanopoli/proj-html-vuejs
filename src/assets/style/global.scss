@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+//font
+@import "~@fontsource/poppins/400.css";
+@import "~@fontsource/poppins/500.css";
+@import "~@fontsource/poppins/600.css";
+@import "~@fontsource/poppins/700.css";
+
+//fontawesome
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid"; // fas
+@import "~@fortawesome/fontawesome-free/scss/regular"; // far
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

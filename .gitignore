@@ -21,3 +21,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+vue.config.js
+src/assets/res/colors.PNG
+src/assets/res/Progetto HTML_VueJS con Vue CLI.pdf
+src/assets/res/screencapture.png
