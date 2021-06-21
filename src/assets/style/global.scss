@@ -8,6 +8,7 @@
 @import "~@fontsource/poppins/600.css";
 @import "~@fontsource/poppins/700.css";
 @import "~@fontsource/poppins/800.css";
+@import "~@fontsource/poppins/900.css";
 
 //fontawesome
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
@@ -19,9 +20,46 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0;        
+}
+
+body {
     font-family: 'Poppins', sans-serif;
-    color: $text-col;    
+    font-size: 17px;
+    color: $text-col;   
+}
+
+input, select {
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 17px;
+    border: none;
+    background-color: $bg-alpha10-col;
+    appearance: none;
+    
+    
+}
+input:focus{
+    outline: none;
+}
+input:focus-visible {
+    outline: 2px solid $brand-dark-col;
+}
+
+.select-box {
+    position: relative;
+    border-radius: 5px;
+
+    &::after {
+        position: absolute;
+        content: url('./assets/img/angle-down-solid.svg');
+        top: 0;
+        right: 20px;
+        transform: translateY(50%);
+        width: 15px;
+        pointer-events: none; 
+        opacity: 0.3;                    
+    }
 }
 
 .container {
@@ -38,13 +76,15 @@ ul.inline-list {
 }
 
 .btn {
-    @include flex-center ('cross');
     padding: 10px 30px;
     border-radius: 5px;
+    text-transform: uppercase;
 }
-
 .btn-solid {
     background-color: $brand-dark-col;
     color: $text-col;
-    text-transform: uppercase;
+}
+.btn-outline {
+    color: $brand-dark-col;
+    border: 1px solid $brand-dark-col;
 }

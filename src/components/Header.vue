@@ -32,12 +32,23 @@
         </nav>
         <!-- /menu -->
 
-        <div class="hero">
-            <h5>Fusions & acquisitions</h5>
-            <h1>Insurance consulting</h1>
-            <form action="">
-
-            </form>
+        <div class="container hero">
+            <div>
+                <h4>Fusions & acquisitions</h4>
+                <h1>Insurance consulting</h1>
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Phone">
+                    <div class="select-box">
+                        <select name="more-info" id="more-info">
+                            <option value="">More Info</option>    
+                        </select>
+                    </div>
+                    <a href="#" class="btn btn-solid">Get in touch</a>
+                    <a href="#" class="btn btn-outline">Read more</a>
+                </form>
+            </div>
         </div>
 
     </header>
@@ -63,6 +74,10 @@ export default {
     @import '../assets/style/mixins.scss';
 
     header {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: url('../assets/img/bg-6.jpg') 0% 30%;
         
         a {
             text-decoration: none;                        
@@ -70,7 +85,8 @@ export default {
 
         .top-bar {
             @include flex-center ('cross');
-            height: 50px;
+            flex-shrink: 0;
+            height: $topbar-height;
             background-color: $text-dark-col;
             font-weight: 300;
 
@@ -102,7 +118,9 @@ export default {
         nav {
             @include flex-center ('cross');
             justify-content: space-between;
-            height: 90px;
+            flex-shrink: 0;
+            height: $nav-height;
+            margin-top: 10px;
 
             *:not(.btn) {
                 color: $text-dark-col;
@@ -110,8 +128,6 @@ export default {
             }
 
             a {
-                font-size: 18px;
-
                 span {
                     font-size: 20px;
                     font-weight: 600;
@@ -124,7 +140,7 @@ export default {
                         border-top-left-radius: 25px;
                         border-bottom-left-radius: 25px;
                         color: $brand-col;
-                        background-color: $brand-alpha20-col;
+                        background-color: $brand-alpha15-col;
                     }
                 }
             }
@@ -132,6 +148,56 @@ export default {
             ul {
                 li {
                     margin-left: 40px;
+                }
+            }
+        }
+
+        .hero {
+            @include flex-center ('cross');
+            justify-content: flex-end;            
+            height: 100%;
+
+            div {
+                width: 45%;
+
+                h1 {
+                    margin: 0;
+                    text-transform: capitalize;
+                    font-size: 74px;
+                    font-weight: 900;
+                    line-height: 86px;
+                    color: $text-dark-col;
+                }
+
+                h4 {
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $brand-col;
+                }
+
+                form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin-top: 30px;
+                    
+                    input,
+                    .select-box {
+                        display: inline-block;
+                        width: calc(50% - 15px);
+                        margin: 0 15px 15px 0;
+                    }
+
+                    select {
+                        height: 100%;
+                        width: 100%;
+                    }                    
+
+                    a{
+                        margin-right: 15px;
+                    }
                 }
             }
         }
