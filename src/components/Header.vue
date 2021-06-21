@@ -21,7 +21,7 @@
                 <span>Gen</span>
             </a>
             <ul class="inline-list">
-                <li v-for="link, index in headerLinks"
+                <li v-for="link, index in menuLinks"
                     :key="index">
                     <a :href="link.url">{{ link.text.toUpperCase() }}</a>
                 </li>
@@ -55,14 +55,14 @@
 </template>
 
 <script>
-import headerLinks from '../data/header-links.js';
-import contactsLinks from '../data/contacts-links.js';
+import menuLinks from '../data/links/menu.js';
+import contactsLinks from '../data/links/contacts.js';
 
 export default {
     name: 'Header',
     data() {
         return {
-            headerLinks,
+            menuLinks,
             contactsLinks
         }
     }
@@ -94,7 +94,6 @@ export default {
                 display: flex;
                 justify-content: space-between;
                 font-size: 14px;
-                color: $white60;
 
                 li {
                     &:first-child {
@@ -105,7 +104,7 @@ export default {
                     }
 
                     * {
-                        color: $white60;
+                        color: $white70;
                     }
 
                     i {
@@ -141,20 +140,12 @@ export default {
             div {
                 width: 45%;
 
-                h1 {
-                    margin: 0;
-                    text-transform: capitalize;
-                    font-size: 74px;
-                    font-weight: 900;
-                    line-height: 86px;
+                h1 {                
                     color: $text-dark-col;
                 }
 
                 h4 {
                     margin-bottom: 10px;
-                    text-transform: uppercase;
-                    font-size: 18px;
-                    font-weight: 500;
                     color: $brand-col;
                 }
 

@@ -30,8 +30,50 @@ body {
     color: $text-col;   
 }
 
+section.light {
+    color: $text-dark-col;
+}
+section.dark {
+    color: $text-col;
+}
+
+h1 {
+    text-transform: capitalize;
+    font-size: 74px;
+    font-weight: 900;
+    line-height: 86px;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 48px;
+
+    & > span {
+        background-color: $brand15-col;
+        border-radius: 5px;
+        padding: 0 15px;
+    }
+}
+
 h3 {
+    font-weight: 600;
     font-size: 24px;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h5 {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $brand-col;
+}
+
+p {
+    font-weight: 200;
 }
 
 input, select {
@@ -42,20 +84,23 @@ input, select {
     background-color: $black10;
     appearance: none;
 }
-input:focus{
-    outline: none;
-}
-input:focus-visible {
-    outline: 2px solid $brand-dark-col;
+
+input {
+    &:focus{
+        outline: none;
+    }
+    &:focus-visible {
+        outline: 2px solid $brand-dark-col;
+    }
 }
 
 ul {
     list-style: none;
-}
-
-ul.inline-list {
-    li {
-        display: inline-block;
+    
+    &.inline-list {
+        li {
+            display: inline-block;
+        }
     }
 }
 
@@ -84,6 +129,7 @@ ul.inline-list {
     padding: 10px 30px;
     border-radius: 5px;
     text-transform: uppercase;
+    text-decoration: none;
     font-weight: 400;
 }
 .btn-solid {
@@ -100,15 +146,15 @@ ul.inline-list {
 
     span {
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 5px;
         margin-right: 5px;
 
         &:first-child {
             padding: 10px 0 10px 30px;
-            border-top-left-radius: 25px;
-            border-bottom-left-radius: 25px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
             color: $brand-col;
             background-color: $brand15-col;
         }
