@@ -59,7 +59,7 @@ import menuLinks from '../data/links/menu.js';
 import contactsLinks from '../data/links/contacts.js';
 
 export default {
-    name: 'Header',
+    name: 'TheHeader',
     data() {
         return {
             menuLinks,

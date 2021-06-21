@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    name: 'Option',
+    name: 'OptionCard',
     props: {
         option: Object
     }

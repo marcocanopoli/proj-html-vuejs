@@ -30,11 +30,23 @@ body {
     color: $text-col;   
 }
 
-section.light {
-    color: $text-dark-col;
-}
-section.dark {
-    color: $text-col;
+section {
+    padding: 130px 0;
+
+    &.dark-text,
+    .section-dark-title {
+        color: $text-dark-col;
+
+        h2 {
+            span {
+                color: $brand-dark-col;
+            }
+        }
+    }
+    &.light-text,
+    .section-light-title {
+        color: $text-col;
+    }
 }
 
 h1 {

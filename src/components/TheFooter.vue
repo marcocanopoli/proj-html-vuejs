@@ -66,7 +66,7 @@ import supportLinks from '../data/links/support.js'
 import LinksCard from './LinksCard.vue'
 
 export default {
-    name: 'Footer',
+    name: 'TheFooter',
     data() {
         return {
             aboutLinks,

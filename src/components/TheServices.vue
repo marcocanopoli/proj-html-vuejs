@@ -1,0 +1,63 @@
+<template>
+    <section class="dark-text">
+        <div class="container">
+            <SectionTitle :sectionTitle="Title"/>
+
+            <!-- Option cards -->
+            <div class="option-cards">
+                <OptionCard 
+                    v-for="item, index in services"
+                    :key="index"
+                    :option="item"/>
+            </div>
+            <!-- /Option cards -->
+
+        </div>
+    </section>
+</template>
+
+<script>
+import SectionTitle from './SectionTitle.vue';
+import OptionCard from './OptionCard.vue';
+import services from '../data/links/services.js'
+
+export default {
+    name: 'TheServices',
+    components: {
+        SectionTitle,
+        OptionCard
+    },
+    data() {
+        return {
+            Title: {
+                class: 'section-dark-title',
+                subtitle: 'Our business areas',
+                titleHTML: 'Excellence in <span>Services</span>',
+                firstText: 'We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.',
+                button: {
+                    class: "btn btn-solid",
+                    url: "#",
+                    text: "See all"
+                }
+            },
+            services
+        }
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+    @import '../assets/style/variables.scss';
+    @import '../assets/style/mixins.scss';
+
+    section {
+        background-color: $bg-light-col;        
+        
+        .option-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+</style>

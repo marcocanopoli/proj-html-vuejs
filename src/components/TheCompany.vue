@@ -3,10 +3,7 @@
         <div class="container">
             
             <div class="left">
-                <h5>About the network</h5>
-                <h2><span>The</span> Company</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit exercitationem sint quisquam accusamus unde, earum numquam dolores modi, inventore debitis.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia in minus adipisci eius, pariatur et.</p>
+                <SectionTitle :sectionTitle="Title"/>
             </div>
 
             <div class="right">
@@ -36,8 +33,24 @@
 </template>
 
 <script>
+import SectionTitle from './SectionTitle.vue'
+
 export default {
-    name: 'Company'
+    name: 'TheCompany',
+    components: {
+        SectionTitle
+    },
+    data() {
+        return {
+            Title: {
+                class: 'section-light-title',
+                subtitle: 'About the network',
+                titleHTML: '<span>The</span> Company',
+                firstText: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit exercitationem sint quisquam accusamus unde, earum numquam dolores modi, inventore debitis.',
+                secondText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia in minus adipisci eius, pariatur et.'
+            }
+        }
+    }
 }
 </script>
 
@@ -46,7 +59,6 @@ export default {
     @import '../assets/style/mixins.scss';
 
     section {
-        padding: 130px 0;
         background-color: $bg-col;
 
         .container {
@@ -57,13 +69,7 @@ export default {
             .right,
             .left {
                 width: calc((100% - 60px) / 2);
-            }
-
-            .left {
-                & > * {
-                    margin-bottom: 20px;
-                }
-            }
+            }           
 
             .right {
                 display: flex;
