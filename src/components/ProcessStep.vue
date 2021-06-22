@@ -43,7 +43,7 @@ export default {
             border-radius: 50%;
             color: $brand-dark-col;
             background-color: $brand-light-col;
-            transition: $trans-long;
+            transition: $trans-time;
         }
 
         h3 {
