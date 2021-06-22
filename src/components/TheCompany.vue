@@ -68,7 +68,7 @@ export default {
 
             .right,
             .left {
-                width: calc((100% - 60px) / 2);
+                width: calc((100% - 60px) / 2);                
             }           
 
             .right {
@@ -76,6 +76,7 @@ export default {
                 justify-content: space-between;
                 align-content: space-between;
                 flex-wrap: wrap;
+                margin-left: 90px;
 
                 & > div {
                     width: calc((100% - 30px) / 2);
@@ -93,6 +94,10 @@ export default {
                     h3 {
                         display: inline-block;
                         margin-bottom: 15px;
+                    }
+
+                    p {
+                        color: $white80;
                     }
                 }
             }

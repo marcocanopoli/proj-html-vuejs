@@ -5,8 +5,9 @@
         <div v-if="sectionTitle.button"
             class="description">
             <div>
-                <p>{{ sectionTitle.firstText }}</p>
-                <p v-if="sectionTitle.secondText">{{ sectionTitle.secondText }}</p>
+                <p  v-html="sectionTitle.firstText"></p>
+                <p  v-if="sectionTitle.secondText"
+                    v-html="sectionTitle.secondText"></p>
             </div>
             <a  :class="sectionTitle.button.class" 
                 :href="sectionTitle.button.url">
@@ -14,8 +15,9 @@
             </a>
         </div>
         <div v-else>
-            <p>{{ sectionTitle.firstText }}</p>
-            <p v-if="sectionTitle.secondText">{{ sectionTitle.secondText }}</p>
+            <p  v-html="sectionTitle.firstText"></p>
+            <p  v-if="sectionTitle.secondText"
+                v-html="sectionTitle.secondText"></p>
         </div>
     </div>
 </template>

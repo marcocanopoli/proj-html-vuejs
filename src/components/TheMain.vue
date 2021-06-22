@@ -3,6 +3,9 @@
         <TheCompany />
         <TheServices />
         <TheProcess />
+        <TheTeam />
+        <TheNews />
+        <TheNewsletter />
     </main>
 </template>
 
@@ -10,13 +13,19 @@
 import TheCompany from './TheCompany.vue';
 import TheServices from './TheServices.vue';
 import TheProcess from './TheProcess.vue';
+import TheTeam from './TheTeam.vue';
+import TheNews from './TheNews.vue';
+import TheNewsletter from './TheNewsletter.vue';
 
 export default {
     name: 'TheMain',
     components: {
         TheCompany,
         TheServices,
-        TheProcess
+        TheProcess,
+        TheTeam,
+        TheNews,
+        TheNewsletter
     }
 }
 </script>

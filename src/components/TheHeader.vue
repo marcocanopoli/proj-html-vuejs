@@ -128,6 +128,7 @@ export default {
             ul {
                 li {
                     margin-left: 40px;
+                    font-size: 17px;
                 }
             }
         }
