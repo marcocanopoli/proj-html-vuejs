@@ -2,9 +2,7 @@
     <section>
         <div class="container">
             
-            <div class="left">
-                <SectionTitle :sectionTitle="Title"/>
-            </div>
+            <SectionTitle :sectionTitle="Title"/>
 
             <div class="right">
                 <div>
@@ -66,16 +64,12 @@ export default {
             justify-content: space-between;
             height: 100%;
 
-            .right,
-            .left {
+            & > div {
                 width: calc((100% - 60px) / 2);                
             }           
 
             .right {
-                display: flex;
-                justify-content: space-between;
-                align-content: space-between;
-                flex-wrap: wrap;
+                @include flex-wrap-between;
                 margin-left: 90px;
 
                 & > div {

@@ -81,9 +81,10 @@ h3 {
 }
 
 h4 {
-    text-transform: uppercase;
     font-size: 18px;
     font-weight: 500;
+    text-transform: uppercase;
+    color: $brand-col;
 }
 
 h5 {    
@@ -97,6 +98,10 @@ p {
     font-weight: 300;    
 }
 
+a {
+    text-decoration: none;
+}
+
 input, select {
     padding: 15px 20px;
     border-radius: 5px;
@@ -104,19 +109,35 @@ input, select {
     border: none;
     background-color: $black10;
     appearance: none;
+
+    &:hover,
+    &:focus {
+        background-color: $black15;
+    }
 }
 
 input {
-    &:focus{
+    color: $brand-dark-col;
+
+    &:focus {
         outline: none;
     }
     &:focus-visible {
-        outline: 2px solid $brand-dark-col;
+        outline: 2px solid $brand-col;
     }
 
     &::placeholder {
-        color: $black70;
+        opacity: 1;
     }
+}
+
+select {
+    cursor: pointer;
+}
+
+input::placeholder,
+select {
+    color: $black40;
 }
 
 ul {
@@ -157,14 +178,30 @@ ul {
     text-decoration: none;
     font-size: 17px;
     font-weight: 400;
+    transition: $trans-time;
+
+    &:hover {
+        border-radius: 30px;
+        box-shadow: 0 3px 5px $black25;
+    }
 }
 .btn-solid {
     background-color: $brand-dark-col;
     color: $text-col;
+
+    &:hover {
+        background-color: $brand-col;        
+    }
 }
 .btn-outline {
     color: $brand-dark-col;
-    border: 1px solid $brand-dark-col;
+    border: 2px solid $brand-dark-col;
+
+    &:hover {
+        background-color: $brand-col;
+        border-color: $brand-col;
+        color: $text-col;
+    }
 }
 
 .logo {

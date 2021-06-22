@@ -49,20 +49,17 @@ export default {
 
 <style lang="scss" scoped>
     @import '../assets/style/variables.scss';
+    @import '../assets/style/mixins.scss';
 
     section {
         background-color: $bg-col;
 
         .container {
             display: flex;
-
-            .team { 
-                .team-cards {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    padding-top: 30px;
-                }
+            
+            .team-cards {
+                @include flex-wrap-between;
+                padding-top: 30px;
             }
 
             .quote {

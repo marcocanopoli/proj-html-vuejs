@@ -29,6 +29,17 @@ export default {
         padding: 50px;
         border-radius: 10px;
         background-color: #fff;
+        transition: $trans-time;
+
+        &:nth-last-child(-n+3) {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            transform: $move-card-up;
+            box-shadow: 0 5px 5px $black10;
+        }
+
 
         div {
             display: flex;
@@ -42,6 +53,12 @@ export default {
                 &.fa-arrow-right {
                     font-size: 24px;
                     color: $brand-dark50-col;
+                    transition: $trans-time;
+
+                    &:hover {
+                        transform: scale(200%);
+                        color: $brand-dark-col;
+                    }
                 }
             }
         }

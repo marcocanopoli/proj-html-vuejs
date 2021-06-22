@@ -4,7 +4,7 @@
             <SectionTitle :sectionTitle="Title"/>
         </div>
         <div class="steps">
-            <ProcessStep 
+            <ProcessStep
                 v-for="step in steps"
                 :key="step.stepNum"
                 :step="step"/>
@@ -21,7 +21,7 @@ export default {
     name: 'TheProcess',
     components: {
         SectionTitle,
-        ProcessStep        
+        ProcessStep
     },
     data() {
         return {
@@ -48,11 +48,10 @@ export default {
     }
 
     .steps {
+        @include flex-center ('main');
         position: relative;
-        display: flex;
-        justify-content: center;
 
-        &::before{            
+        &::before{
             position: absolute;
             top: 23px;
             left: 0;

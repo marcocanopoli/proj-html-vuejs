@@ -1,5 +1,6 @@
 <template>
     <header>
+
         <!-- top bar -->
         <div class="top-bar">
             <ul class="container inline-list">
@@ -74,21 +75,17 @@ export default {
     @import '../assets/style/mixins.scss';
 
     header {
-        height: 100vh;
         display: flex;
         flex-direction: column;
-        background: url('../assets/img/bg-6.jpg') 0% 30%;
-        
-        a {
-            text-decoration: none;                        
-        }
+        height: 100vh;
+        background: url('../assets/img/bg-6.jpg') fixed 0% 30%;
 
         .top-bar {
             @include flex-center ('cross');
             flex-shrink: 0;
-            height: $topbar-height;
-            background-color: $text-dark-col;
+            height: 50px;
             font-weight: 300;
+            background-color: $text-dark-col;
 
             ul {
                 display: flex;
@@ -101,7 +98,7 @@ export default {
                     }
                     &:not(:first-child) {
                         margin-left: 30px;
-                    }
+                    }                    
 
                     * {
                         color: $white70;
@@ -109,6 +106,16 @@ export default {
 
                     i {
                         margin-right: 5px;
+                        transition: $trans-time;
+                    }
+
+                    a {
+                        transition: $trans-time;
+                        &:hover {
+                            &, i {
+                                color: $brand-col;                                
+                            }
+                        }
                     }
                 }
             }
@@ -118,17 +125,27 @@ export default {
             @include flex-center ('cross');
             justify-content: space-between;
             flex-shrink: 0;
-            height: $nav-height;
+            height: 70px;
             margin-top: 10px;
 
             a:not(.btn) {
-                color: $text-dark-col;                
+                color: $text-dark-col;
+                transition: $trans-time;
+                
+                &:hover:not(.logo) {
+                    color: $brand-col;
+                    transform: translateY(-4px);
+                }
             }
 
             ul {
                 li {
+                    a {
+                        display: inline-block;
+                    }
                     margin-left: 40px;
                     font-size: 17px;
+                    font-weight: 500;
                 }
             }
         }
@@ -146,8 +163,7 @@ export default {
                 }
 
                 h4 {
-                    margin-bottom: 10px;
-                    color: $brand-col;
+                    margin-bottom: 10px;                    
                 }
 
                 form {
@@ -158,7 +174,6 @@ export default {
                     
                     input,
                     .select-box {
-                        display: inline-block;
                         width: calc(50% - 15px);
                         margin: 0 15px 15px 0;
                     }

@@ -93,12 +93,11 @@ export default {
         .footer-top {
             @include flex-center ('both');
             width: 100%;
-            height: 620px;
+            padding: 130px 0;
             background-color: $bg-col;
 
             .container {
-                display: flex;
-                justify-content: space-between;
+                @include flex-wrap-between;
 
                 & > div {
                     width: calc((100% - 90px) / 4);
@@ -147,17 +146,21 @@ export default {
         
         .footer-bottom {
             @include flex-center ('cross');        
-            @include small-font;
             height: 90px;
+            font-size: 15px;
+            font-weight: 200;
             background-color: $bg-dark-col;
 
             .container {
-                display: flex;
-                justify-content: space-between;
+                @include flex-wrap-between;
 
                 a{
                     font-size: 17px;
                     color: $brand-col;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }

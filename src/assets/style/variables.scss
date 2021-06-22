@@ -14,16 +14,24 @@ $bg-col: #111117;
 $bg-dark-col: #0d0d11;
 $bg-light-col: #eef4ed;
 
+// black shades
+$black5: rgba(#000, 0.05);
 $black10: rgba(#000, 0.1);
+$black15: rgba(#000, 0.15);
 $black25: rgba(#000, 0.25);
 $black40: rgba(#000, 0.40);
 $black60: rgba(#000, 0.6);
 $black70: rgba(#000, 0.7);
+
+// white shades
 $white3: rgba(#fff, 0.03);
 $white50: rgba(#fff, 0.5);
 $white60: rgba(#fff, 0.6);
 $white70: rgba(#fff, 0.7);
 $white80: rgba(#fff, 0.8);
 
-$topbar-height: 50px;
-$nav-height: 70px;
+//transition
+$trans-time: .4s ease-out;
+$trans-long: 1s ease-out;
+$move-card-up: translateY(-7.5px);
+

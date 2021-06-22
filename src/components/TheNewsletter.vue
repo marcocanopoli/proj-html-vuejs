@@ -36,7 +36,7 @@ export default {
     @import '../assets/style/variables.scss';
 
     section {
-        background: url('../assets/img/bg-1.jpg') center;
+        background: url('../assets/img/bg-1.jpg') fixed center;
 
         .container {
             display: flex;
@@ -48,10 +48,10 @@ export default {
             }
 
             form {
-                width: 50%;
-                padding-left: 20px;
                 display: flex;
                 flex-direction: column;
+                width: 50%;
+                padding-left: 20px;
 
                 & > * {
                     margin-bottom: 20px;
@@ -59,6 +59,11 @@ export default {
 
                 input {
                     background-color: $white50;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $white60;
+                    }
                 }
 
                 a {

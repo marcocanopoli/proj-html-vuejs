@@ -24,17 +24,26 @@ export default {
         margin: 0 30px 20px;
         text-align: center;
 
+        &:hover {
+            span {
+                color: $text-col;
+                background-color: $brand-col;
+                transform: scale(130%);
+            }
+        }
+
         span {
             display: inline-block;            
             height: 46px;
             width: 46px;
             line-height: 46px;
-            vertical-align: middle;
-            border-radius: 50%;
             font-size: 20px;
             font-weight: 700;
+            vertical-align: middle;
+            border-radius: 50%;
             color: $brand-dark-col;
             background-color: $brand-light-col;
+            transition: $trans-long;
         }
 
         h3 {

@@ -43,10 +43,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    @import '../assets/style/mixins.scss';
 
     .news {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        @include flex-wrap-between;
     }
 </style>

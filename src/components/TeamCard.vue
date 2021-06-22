@@ -42,9 +42,10 @@ export default {
         display: flex;
         height: 130px;
         width: calc((100% - 50px) / 2);
+        margin-bottom: 50px;
 
-        &:nth-child(-n+2) {
-            margin-bottom: 50px;
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
         }
 
         img {
@@ -54,9 +55,7 @@ export default {
         }
 
         & > div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            @include flex-wrap-between;
 
             h3 {
                 padding-top: 5px;
@@ -75,12 +74,21 @@ export default {
                     margin-right: 5px;
                     border-radius: 50%;
                     background-color: $brand-dark15-col;
+                    transition: $trans-time;
+
+                    &:hover {
+                        background-color: $brand-col;
+
+                        i {
+                            color: $text-col;
+                        }
+                    }
                     
                     a {
                         @include flex-center ('both');
                         height: 100%;
                         width: 100%;
-                        text-decoration: none;
+                        text-decoration: none;                        
 
                         i {
                             font-size: 18px;

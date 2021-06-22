@@ -1,3 +1,6 @@
+<!-- 'class' refers to global 'section-dark-title' and 'section-light-title' -->
+<!-- h2 and paragraphs display HTML content -->
+
 <template>
     <div :class="sectionTitle.class">
         <h5>{{ sectionTitle.subtitle }}</h5>
@@ -32,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+    @import '../assets/style/variables.scss';
     @import '../assets/style/mixins.scss';
     
     div > * {
