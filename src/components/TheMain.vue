@@ -1,7 +1,8 @@
 <template>
     <main>
         <TheCompany />
-        <TheServices />
+        <TheServices 
+            :services="servicesLinks"/>
         <TheProcess />
         <TheTeam />
         <TheNews />
@@ -26,6 +27,9 @@ export default {
         TheTeam,
         TheNews,
         TheNewsletter
+    },
+    props: {
+        servicesLinks: Array
     }
 }
 </script>

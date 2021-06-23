@@ -1,9 +1,9 @@
 <template>
-    <section class="dark-text">
+    <section class="news dark-text">
         <div class="container">
-            <SectionTitle :sectionTitle="Title"/>
-            <div class="news">
-                <NewsCard 
+            <SectionTitle :section-title="Title"/>
+            <div class="news-cards">
+                <TheNewsCard 
                     v-for="item in news"
                     :key="item.pic"
                     :item="item"/>
@@ -14,14 +14,14 @@
 
 <script>
 import SectionTitle from './SectionTitle.vue';
-import NewsCard from './NewsCard.vue';
+import TheNewsCard from './TheNewsCard.vue';
 import news from '../data/news.js';
 
 export default {
     name: 'TheNews',
     components: {
         SectionTitle,
-        NewsCard
+        TheNewsCard
     },
     data() {
         return {
@@ -31,7 +31,7 @@ export default {
                 titleHTML: 'Latest <span>News</span>',
                 firstText: 'Every week we publish content about what is best in the business world.',
                 button: {
-                    class: "btn btn-solid",
+                    class: "button button-solid",
                     url: "#",
                     text: "See all"
                 }
@@ -45,7 +45,7 @@ export default {
 <style lang="scss" scoped>
     @import '../assets/style/mixins.scss';
 
-    .news {
+    .news-cards {
         @include flex-wrap-between;
     }
 </style>

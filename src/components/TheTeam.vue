@@ -1,10 +1,10 @@
 <template>
-    <section class="light-text">
+    <section class="team light-text">
         <div class="container">
             <div class="team">
-                <SectionTitle :sectionTitle="Title"/>
+                <SectionTitle :section-title="Title"/>
                 <div class="team-cards">
-                    <TeamCard 
+                    <TheTeamCard 
                         v-for="member, index in team"
                         :key="index"
                         :member="member"/>
@@ -24,14 +24,14 @@
 
 <script>
 import SectionTitle from './SectionTitle.vue';
-import TeamCard from './TeamCard.vue';
+import TheTeamCard from './TheTeamCard.vue';
 import team from '../data/team-members';
 
 export default {
     name: 'TheTeam',
     components: {
         SectionTitle,
-        TeamCard
+        TheTeamCard
     },
     data() {
         return {
@@ -51,7 +51,7 @@ export default {
     @import '../assets/style/variables.scss';
     @import '../assets/style/mixins.scss';
 
-    section {
+    .team {
         background-color: $bg-col;
 
         .container {

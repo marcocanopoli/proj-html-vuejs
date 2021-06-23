@@ -4,7 +4,7 @@
         <div>
             <h3>{{ member.name }}</h3>
             <span>{{ member.jobTitle.toUpperCase() }}</span>
-            <ul class="inline-list">
+            <ul>
                 <li>
                     <a :href="member.facebook">
                         <i class="fab fa-facebook-f"></i>
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-    name: 'TeamCard',
+    name: 'TheTeamCard',
     props: {
         member: Object
     }
@@ -68,7 +68,8 @@ export default {
             ul {
                 padding-top: 10px;
 
-                li {                
+                li {
+                    display: inline-block;                
                     height: 40px;
                     width: 40px;
                     margin-right: 5px;
@@ -92,7 +93,8 @@ export default {
 
                         i {
                             font-size: 18px;
-                            color: $brand-dark-col;
+                            color: $brand-dark-col;                            
+                            transition: $trans-time;
                         }
                     }
                 }

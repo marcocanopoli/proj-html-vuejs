@@ -22,23 +22,23 @@
                         <i class="fas fa-map-marker-alt"></i>
                         Main Avenue, 987
                     </span>
-                    <a href="#" class="btn btn-outline">Get in touch</a>
+                    <a href="#" class="button button-outline">Get in touch</a>
                 </div>
                 <!-- /contacts -->
 
                 <!-- links -->
                 <div>
-                    <LinksCard 
+                    <TheFooterLinksCard 
                         :title="'About'"
                         :links="aboutLinks"/>
                 </div>
                 <div>
-                    <LinksCard 
+                    <TheFooterLinksCard 
                         :title="'Services'"
                         :links="servicesLinks"/>
                 </div>
                 <div>
-                    <LinksCard 
+                    <TheFooterLinksCard 
                         :title="'Support'"
                         :links="supportLinks"/>
                 </div>
@@ -59,23 +59,26 @@
 
 //links
 import aboutLinks from '../data/links/about.js'
-import servicesLinks from '../data/links/services.js'
+// import servicesLinks from '../data/links/services.js'
 import supportLinks from '../data/links/support.js'
 
 //components
-import LinksCard from './LinksCard.vue'
+import TheFooterLinksCard from './TheFooterLinksCard.vue'
 
 export default {
     name: 'TheFooter',
+    components: {
+        TheFooterLinksCard
+    },
     data() {
         return {
             aboutLinks,
-            servicesLinks,
+            // servicesLinks,
             supportLinks
         }
     },
-    components: {
-        LinksCard
+    props: {
+        servicesLinks: Array
     }
 }
 </script>
@@ -84,86 +87,78 @@ export default {
     @import '../assets/style/variables.scss';
     @import '../assets/style/mixins.scss';
 
-    footer {
-        
-        a {
-            text-decoration: none;
-        }
-        
-        .footer-top {
-            @include flex-center ('both');
-            width: 100%;
-            padding: 130px 0;
-            background-color: $bg-col;
+    .footer-top {
+        @include flex-center ('both');
+        width: 100%;
+        padding: 130px 0;
+        background-color: $bg-col;
 
-            .container {
-                @include flex-wrap-between;
+        .container {
+            @include flex-wrap-between;
 
-                & > div {
-                    width: calc((100% - 90px) / 4);
-                }
+            & > div {
+                width: calc((100% - 90px) / 4);
+            }
 
-                .contacts {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    padding-right: 15px;
-                    font-weight: 200;
+            .contacts {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-right: 15px;
+                font-weight: 200;
+                color: $white80;
+
+                .logo {
                     color: $white80;
 
-                    .logo {
-                        color: $white80;
-
-                        span {
-                            font-size: 26px;
-
-                            &:first-child {
-                                border-top-left-radius: 50px;
-                                border-bottom-left-radius: 50px;                    
-                            }
-                        }                        
-                    }
-
-                    i {
-                        margin-right: 10px;
-                    }
-                    p {
-                        padding: 30px 0;
-                    }
-                    
                     span {
-                        margin-bottom: 15px;
-                    }
+                        font-size: 26px;
 
-                    .btn {
-                        color: $text-col;
-                        margin-top: 20px;
-                    }
+                        &:first-child {
+                            border-top-left-radius: 50px;
+                            border-bottom-left-radius: 50px;                    
+                        }
+                    }                        
                 }
-            }
 
-        }
-        
-        .footer-bottom {
-            @include flex-center ('cross');        
-            height: 90px;
-            font-size: 15px;
-            font-weight: 200;
-            background-color: $bg-dark-col;
+                i {
+                    margin-right: 10px;
+                }
+                p {
+                    padding: 30px 0;
+                }
+                
+                span {
+                    margin-bottom: 15px;
+                }
 
-            .container {
-                @include flex-wrap-between;
-
-                a{
-                    font-size: 17px;
-                    color: $brand-col;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                .button {
+                    color: $text-col;
+                    margin-top: 20px;
                 }
             }
         }
 
+    }
+    
+    .footer-bottom {
+        @include flex-center ('cross');        
+        height: 90px;
+        font-size: 15px;
+        font-weight: 200;
+        background-color: $bg-dark-col;
+
+        .container {
+            @include flex-wrap-between;
+
+            a{
+                font-size: 17px;
+                color: $brand-col;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 </style>

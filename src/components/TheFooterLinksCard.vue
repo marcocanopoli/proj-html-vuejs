@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    name: 'LinksCard',
+    name: 'TheFooterLinksCard',
     props: {
         title: String,
         links: Array

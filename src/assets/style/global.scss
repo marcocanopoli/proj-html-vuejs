@@ -102,53 +102,41 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
+input {
+    text-indent: 4px;
+    color: $brand-dark-col;
+}
+
 input, select {
     padding: 15px 20px;
-    border-radius: 5px;
     font-size: 17px;
     border: none;
+    border-radius: 5px;
     background-color: $black10;
     appearance: none;
 
     &:hover,
     &:focus {
         background-color: $black15;
-    }
-}
-
-input {
-    color: $brand-dark-col;
-
-    &:focus {
         outline: none;
-    }
-    &:focus-visible {
-        outline: 2px solid $brand-col;
-    }
 
-    &::placeholder {
-        opacity: 1;
+        &:focus-visible {
+            outline: 2px solid $brand-col;
+        }
+        
     }
-}
-
-select {
-    cursor: pointer;
 }
 
 input::placeholder,
 select {
     color: $black40;
+    opacity: 1;
 }
 
-ul {
-    list-style: none;
-    
-    &.inline-list {
-        li {
-            display: inline-block;
-        }
-    }
-}
 
 .container {
     width: 60%;
@@ -164,20 +152,23 @@ ul {
         content: url('./assets/img/angle-down-solid.svg');
         top: 0;
         right: 20px;
-        transform: translateY(50%);
         width: 15px;
+        transform: translateY(50%);
+        opacity: 0.3;
         pointer-events: none; 
-        opacity: 0.3;                    
+        
+    }
+    &:hover::after {
+        color: $brand-dark-col;
     }
 }
 
-.btn {
+.button {
     padding: 10px 30px;
-    border-radius: 5px;
     text-transform: uppercase;
-    text-decoration: none;
     font-size: 17px;
     font-weight: 400;
+    border-radius: 5px;
     transition: $trans-time;
 
     &:hover {
@@ -185,7 +176,7 @@ ul {
         box-shadow: 0 3px 5px $black25;
     }
 }
-.btn-solid {
+.button-solid {
     background-color: $brand-dark-col;
     color: $text-col;
 
@@ -193,7 +184,7 @@ ul {
         background-color: $brand-col;        
     }
 }
-.btn-outline {
+.button-outline {
     color: $brand-dark-col;
     border: 2px solid $brand-dark-col;
 

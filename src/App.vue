@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <TheHeader />
-    <TheMain />
-    <TheFooter />
+    <TheMain 
+      :servicesLinks="servicesLinks"/>
+    <TheFooter 
+      :servicesLinks="servicesLinks"/>
   </div>
 </template>
 
@@ -14,12 +16,19 @@ import TheFooter from './components/TheFooter.vue';
 //font
 import "@fontsource/poppins";
 
+import servicesLinks from './data/links/services.js'
+
 export default {
   name: 'App',
   components: {
     TheHeader,
     TheMain,
     TheFooter
+  },
+  data() {
+    return {
+      servicesLinks
+    }
   }
 }
 </script>

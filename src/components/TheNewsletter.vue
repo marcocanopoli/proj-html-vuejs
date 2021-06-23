@@ -1,11 +1,11 @@
 <template>
-    <section class="light-text">
+    <section class="newsletter light-text">
         <div class="container">
-            <SectionTitle :sectionTitle="Title"/>
+            <SectionTitle :section-title="Title"/>
             <form>
                 <input type="text" placeholder="Name">
                 <input type="text" placeholder="Email">                
-                <a href="#" class="btn btn-solid">Subscribe</a>
+                <a href="#" class="button button-solid">Subscribe</a>
             </form>
         </div>
     </section>
@@ -35,7 +35,7 @@ export default {
 <style lang="scss" scoped>
     @import '../assets/style/variables.scss';
 
-    section {
+    .newsletter {
         background: url('../assets/img/bg-1.jpg') fixed center;
 
         .container {

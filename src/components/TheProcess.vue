@@ -1,10 +1,10 @@
 <template>
-    <section class="dark-text">
+    <section class="process dark-text">
         <div class="container">
-            <SectionTitle :sectionTitle="Title"/>
+            <Section-title :section-title="Title"/>
         </div>
         <div class="steps">
-            <ProcessStep
+            <TheProcessStep
                 v-for="step in steps"
                 :key="step.stepNum"
                 :step="step"/>
@@ -14,14 +14,14 @@
 
 <script>
 import SectionTitle from './SectionTitle.vue';
-import ProcessStep from './ProcessStep.vue';
+import TheProcessStep from './TheProcessStep.vue';
 import steps from '../data/process-steps.js';
 
 export default {
     name: 'TheProcess',
     components: {
         SectionTitle,
-        ProcessStep
+        TheProcessStep
     },
     data() {
         return {

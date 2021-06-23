@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name: 'ProcessStep',
+    name: 'TheProcessStep',
     props: {
         step: Object
     }

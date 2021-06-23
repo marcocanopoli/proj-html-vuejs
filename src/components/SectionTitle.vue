@@ -2,7 +2,8 @@
 <!-- h2 and paragraphs display HTML content -->
 
 <template>
-    <div :class="sectionTitle.class">
+    <div class="title" 
+        :class="sectionTitle.class">
         <h5>{{ sectionTitle.subtitle }}</h5>
         <h2 v-html="sectionTitle.titleHTML"></h2>
         <div v-if="sectionTitle.button"

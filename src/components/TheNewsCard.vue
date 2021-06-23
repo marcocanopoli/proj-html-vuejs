@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: 'NewsCard',
+    name: 'TheNewsCard',
     props: {
         item: Object
     },

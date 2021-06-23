@@ -1,9 +1,8 @@
 <template>
-    <header>
-
+    <header class="page-header">
         <!-- top bar -->
         <div class="top-bar">
-            <ul class="container inline-list">
+            <ul class="container">
                 <li v-for="contact, index in contactsLinks"
                     :key="index">                        
                     <a :href="contact.url">
@@ -16,23 +15,24 @@
         <!-- /top bar -->
 
         <!-- menu -->
-        <nav class="container">
+        <nav class="menu container">
             <a class="logo" href="#">
                 <span>Nex</span>
                 <span>Gen</span>
             </a>
-            <ul class="inline-list">
+            <ul>
                 <li v-for="link, index in menuLinks"
                     :key="index">
                     <a :href="link.url">{{ link.text.toUpperCase() }}</a>
                 </li>
                 <li>
-                    <a class="btn btn-solid" href="#">Get in touch</a>
+                    <a class="button button-solid" href="#">Get in touch</a>
                 </li>
             </ul>
         </nav>
         <!-- /menu -->
 
+        <!-- hero -->
         <div class="container hero">
             <div>
                 <h4>Fusions & acquisitions</h4>
@@ -46,12 +46,12 @@
                             <option value="">More Info</option>    
                         </select>
                     </div>
-                    <a href="#" class="btn btn-solid">Get in touch</a>
-                    <a href="#" class="btn btn-outline">Read more</a>
+                    <a href="#" class="button button-solid">Get in touch</a>
+                    <a href="#" class="button button-outline">Read more</a>
                 </form>
             </div>
         </div>
-
+        <!-- /hero -->
     </header>
 </template>
 
@@ -74,7 +74,7 @@ export default {
     @import '../assets/style/variables.scss';
     @import '../assets/style/mixins.scss';
 
-    header {
+    .page-header {
         display: flex;
         flex-direction: column;
         height: 100vh;
@@ -93,6 +93,8 @@ export default {
                 font-size: 14px;
 
                 li {
+                    display: inline-block;
+
                     &:first-child {
                         flex-grow: 1;
                     }
@@ -121,14 +123,14 @@ export default {
             }
         }
         
-        nav {
+        .menu {
             @include flex-center ('cross');
             justify-content: space-between;
             flex-shrink: 0;
             height: 70px;
             margin-top: 10px;
 
-            a:not(.btn) {
+            a:not(.button) {
                 color: $text-dark-col;
                 transition: $trans-time;
                 
@@ -140,12 +142,14 @@ export default {
 
             ul {
                 li {
-                    a {
-                        display: inline-block;
-                    }
+                    display: inline-block;
                     margin-left: 40px;
                     font-size: 17px;
                     font-weight: 500;
+
+                    a {
+                        display: inline-block;
+                    }
                 }
             }
         }
