@@ -51,11 +51,11 @@ export default {
     @import '../assets/style/mixins.scss';
 
     .services {
-        background-color: $bg-light-col;        
-        
-        .services-cards {
-            @include flex-wrap-between;
-        }
+        background-color: $bg-light-col;
+    }
+
+    .services-cards {
+        @include flex-wrap-between;
     }
 
 </style>

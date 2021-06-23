@@ -87,6 +87,7 @@ export default {
     @import '../assets/style/variables.scss';
     @import '../assets/style/mixins.scss';
 
+    //footer top
     .footer-top {
         @include flex-center ('both');
         width: 100%;
@@ -99,48 +100,48 @@ export default {
             & > div {
                 width: calc((100% - 90px) / 4);
             }
+        }
+    }
 
-            .contacts {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                padding-right: 15px;
-                font-weight: 200;
-                color: $white80;
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 15px;
+        font-weight: 200;
+        color: $white80;
 
-                .logo {
-                    color: $white80;
-
-                    span {
-                        font-size: 26px;
-
-                        &:first-child {
-                            border-top-left-radius: 50px;
-                            border-bottom-left-radius: 50px;                    
-                        }
-                    }                        
-                }
-
-                i {
-                    margin-right: 10px;
-                }
-                p {
-                    padding: 30px 0;
-                }
-                
-                span {
-                    margin-bottom: 15px;
-                }
-
-                .button {
-                    color: $text-col;
-                    margin-top: 20px;
-                }
-            }
+        i {
+            margin-right: 10px;
+        }
+        p {
+            padding: 30px 0;
+        }
+        
+        span {
+            margin-bottom: 15px;
         }
 
+        .button {
+            color: $text-col;
+            margin-top: 20px;
+        }
+    }
+
+    .logo {
+        color: $white80;
+
+        span {
+            font-size: 26px;
+
+            &:first-child {
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;                    
+            }
+        }                        
     }
     
+    //footer bottom
     .footer-bottom {
         @include flex-center ('cross');        
         height: 90px;

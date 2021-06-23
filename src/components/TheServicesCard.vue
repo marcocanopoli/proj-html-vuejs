@@ -1,5 +1,5 @@
 <template>
-    <div class="option">
+    <div class="services-card">
         <div>
             <i :class="option.icon"></i>
             <a :href="option.url">
@@ -23,7 +23,7 @@ export default {
 <style lang="scss" scoped>
     @import '../assets/style/variables.scss';
 
-    .option {
+    .services-card {
         width: calc((100% - 60px) / 3);
         margin-bottom: 30px;
         padding: 50px;
@@ -67,4 +67,5 @@ export default {
             margin-bottom: 20px;
         }
     }
+
 </style>

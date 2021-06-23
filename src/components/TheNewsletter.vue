@@ -37,39 +37,40 @@ export default {
 
     .newsletter {
         background: url('../assets/img/bg-1.jpg') fixed center;
+    }
 
-        .container {
-            display: flex;
+    .container {
+        display: flex;
+        width: 50%;
+
+        & > div {
+            padding-right: 20px;
             width: 50%;
+        }
 
-            & > div {
-                padding-right: 20px;
-                width: 50%;
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding-left: 20px;
+
+            & > * {
+                margin-bottom: 20px;
             }
 
-            form {
-                display: flex;
-                flex-direction: column;
-                width: 50%;
-                padding-left: 20px;
+            input {
+                background-color: $white50;
 
-                & > * {
-                    margin-bottom: 20px;
+                &:hover,
+                &:focus {
+                    background-color: $white60;
                 }
+            }
 
-                input {
-                    background-color: $white50;
-
-                    &:hover,
-                    &:focus {
-                        background-color: $white60;
-                    }
-                }
-
-                a {
-                    align-self: flex-start;
-                }
+            a {
+                align-self: flex-start;
             }
         }
     }
+    
 </style>

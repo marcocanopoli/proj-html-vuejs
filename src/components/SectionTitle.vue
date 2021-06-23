@@ -41,14 +41,14 @@ export default {
     
     div > * {
         margin-bottom: 20px;
+    }
 
-        .description {
-            @include flex-center ('cross');
-            justify-content: space-between;
+    .description {
+        @include flex-center ('cross');
+        justify-content: space-between;
 
-            div {
-                width: 80%;
-            }
+        div {
+            width: 80%;
         }
     }
 

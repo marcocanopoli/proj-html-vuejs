@@ -53,46 +53,47 @@ export default {
 
     .team {
         background-color: $bg-col;
+    }
 
-        .container {
-            display: flex;
-            
-            .team-cards {
-                @include flex-wrap-between;
-                padding-top: 30px;
-            }
+    .container {
+        display: flex;
+    }
 
-            .quote {
-                position: relative;
-                align-self: flex-end;
-                flex-shrink: 0;
-                width: 360px;
-                margin-left: 90px;
-                padding: 40px;
-                border-radius: 5px;
-                background-color: $brand-dark-col;
+    .team-cards {
+        @include flex-wrap-between;
+        padding-top: 30px;
+    }
 
-                & > * {
-                    margin-bottom: 20px;
-                }
+    .quote {
+        position: relative;
+        align-self: flex-end;
+        flex-shrink: 0;
+        width: 360px;
+        margin-left: 90px;
+        padding: 40px;
+        border-radius: 5px;
+        background-color: $brand-dark-col;
 
-                p {
-                    color: $white80;
-                }
+        & > * {
+            margin-bottom: 20px;
+        }
 
-                span {
-                    font-weight: 700;
-                }
+        p {
+            color: $white80;
+        }
 
-                i {
-                    position: absolute;
-                    bottom: 40px;
-                    right: 40px;
-                    transform: translateY(100%);
-                    font-size: 24px;
-                    color: $black25;
-                }
-            }
+        span {
+            font-weight: 700;
+        }
+
+        i {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            transform: translateY(100%);
+            font-size: 24px;
+            color: $black25;
         }
     }
+    
 </style>

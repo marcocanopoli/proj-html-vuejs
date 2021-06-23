@@ -1,7 +1,7 @@
 <template>
-    <div class="team-member">
+    <div class="team-card">
         <img :src="require(`../assets/img/team-${member.pic}.jpg`)" :alt="member.name + ' pic'">
-        <div>
+        <div class="info">
             <h3>{{ member.name }}</h3>
             <span>{{ member.jobTitle.toUpperCase() }}</span>
             <ul>
@@ -38,7 +38,7 @@ export default {
     @import '../assets/style/variables.scss';
     @import '../assets/style/mixins.scss';
 
-    .team-member {
+    .team-card {
         display: flex;
         height: 130px;
         width: calc((100% - 50px) / 2);
@@ -53,53 +53,54 @@ export default {
             margin-right: 30px;
             border-radius: 5px;
         }
+    }
 
-        & > div {
-            @include flex-wrap-between;
+    .info {
+        @include flex-wrap-between;
 
-            h3 {
-                padding-top: 5px;
-            }
-            span {
-                font-size: 15px;
-                color: $white80;
-            }
+        h3 {
+            padding-top: 5px;
+        }
+        
+        span {
+            font-size: 15px;
+            color: $white80;
+        }
 
-            ul {
-                padding-top: 10px;
+        ul {
+            padding-top: 10px;
 
-                li {
-                    display: inline-block;                
-                    height: 40px;
-                    width: 40px;
-                    margin-right: 5px;
-                    border-radius: 50%;
-                    background-color: $brand-dark15-col;
-                    transition: $trans-time;
+            li {
+                display: inline-block;                
+                height: 40px;
+                width: 40px;
+                margin-right: 5px;
+                border-radius: 50%;
+                background-color: $brand-dark15-col;
+                transition: $trans-time;
 
-                    &:hover {
-                        background-color: $brand-col;
+                &:hover {
+                    background-color: $brand-col;
 
-                        i {
-                            color: $text-col;
-                        }
+                    i {
+                        color: $text-col;
                     }
-                    
-                    a {
-                        @include flex-center ('both');
-                        height: 100%;
-                        width: 100%;
-                        text-decoration: none;                        
+                }
+                
+                a {
+                    @include flex-center ('both');
+                    height: 100%;
+                    width: 100%;
+                    text-decoration: none;                        
 
-                        i {
-                            font-size: 18px;
-                            color: $brand-dark-col;                            
-                            transition: $trans-time;
-                        }
+                    i {
+                        font-size: 18px;
+                        color: $brand-dark-col;                            
+                        transition: $trans-time;
                     }
                 }
             }
         }
-
     }
+
 </style>

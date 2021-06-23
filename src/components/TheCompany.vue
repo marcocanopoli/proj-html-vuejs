@@ -47,21 +47,21 @@ export default {
 
     .company {
         background-color: $bg-col;
+    }
 
-        .container {
-            @include flex-center ('both');
-            justify-content: space-between;
-            height: 100%;
+    .container {
+        @include flex-center ('both');
+        justify-content: space-between;
+        height: 100%;
 
-            & > div {
-                width: calc((100% - 60px) / 2);                
-            }           
-
-            .company-cards {
-                @include flex-wrap-between;
-                margin-left: 90px;
-            }
+        & > div {
+            width: calc((100% - 60px) / 2);                
         }
+    }
+
+    .company-cards {
+        @include flex-wrap-between;
+        margin-left: 90px;
     }
 
 </style>
